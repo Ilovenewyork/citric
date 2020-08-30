@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="jquery-2.1.4.js"></script>
     <title>Citric</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>title</title>
   <style type="text/css">
-   .slidescont{
+  
+    
+    .slidescont{
   border:7px solid green;
   width:100%;
-  height:100%
+  height:100%;
   
 }
 
+    
+    #loader{
+      height:100vh;
+      width:100vw;
+      top:0;
+      left:0;
+      position:absolute;
+    
+    
+    }
+    
 
 .mySlides{
   width:100%;
@@ -130,7 +144,7 @@ html,body {
   </head>
   <body>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+<img src="https://media0.giphy.com/media/2WjpfxAI5MvC9Nl8U7/source.gif" id="loader">
 <div class="wrapper"> <!-- wrapper div starts -->
   
   <div class="fixed-bg bg-1">
@@ -167,6 +181,17 @@ html,body {
 </div> <!-- wrapper div ends-->
 
 <script>
+  
+  $(window).on("load", function(){
+  
+  $("#loader".fadeOut("slow"))
+  
+  });
+  
+  
+  
+  
+  
 var slideIndex = 0;
 carousel();
 
